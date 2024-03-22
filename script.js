@@ -8,35 +8,38 @@ console.log("bobek");
 // Flavour Haven: Dodává drahé jídlo z kvalitních surovin.
 
 
+
 const justFood = (pocetOsob) =>{
 
     const cena = pocetOsob*100;
 
-    return `<p> Catering od Just Food pro ${pocetOsob} lidí za ${cena} Kč </p>`
+    return `Catering od Just Food pro ${pocetOsob} lidí za ${cena} Kč `
 }
 
 const yourMama = (pocetOsob) =>{
 
     const cena = pocetOsob*250;
 
-    return `<p>Catering od Your Mama pro ${pocetOsob} lidí za ${cena} Kč </p>`
+    return `Catering od Your Mama pro ${pocetOsob} lidí za ${cena} Kč `
 }
 
 const flavourHaven = (pocetOsob) =>{
 
     const cena = pocetOsob*500;
 
-    return `<p> Catering od Flavour Haven pro ${pocetOsob} lidí za ${cena} Kč </p>`
+    return `Catering od Flavour Haven pro ${pocetOsob} lidí za ${cena} Kč `
 }
 
-document.body.innerHTML += justFood(20);
 
-document.body.innerHTML += yourMama(15);
+document.body.innerHTML += `<p>${justFood(5)}</p>`;
 
-document.body.innerHTML += flavourHaven(25);
+document.body.innerHTML += `<p>${yourMama(15)}</p>`;
 
-const createEvent = (udalost, pocetOsob, cattering, cena) =>{
-    return udalost + `s catering` + cattering + `za ` + cena
+document.body.innerHTML += `<p>${flavourHaven(25)}</p>`;
+
+
+const createEvent = (udalost, fce) => {
+    return  `${udalost} s ${fce}`
 }
 
-document.body.innerHTML += createEvent("Svatba ", 150,`  Flavour Haven za `, flavourHaven(150) );
+document.body.innerHTML += `<p>${createEvent("Svatba",flavourHaven(150))}</p>`;
